@@ -1,0 +1,70 @@
+.wb_tabs {
+	&.vc_general {
+		.vc_tta-tabs-container{
+			border-bottom: 1px solid var(--gold);
+			.vc_tta-tab{
+				>a{
+					padding: 15px 20px;
+					border-width: 0 0 2px 0;
+					border-bottom-color: transparent;
+					background-color: transparent;
+					color: var(--color-text-black);
+					&:hover{
+						background-color: transparent;
+						color: var(--gold);
+					}
+				}
+				&.vc_active {
+					>a{
+						background-color: transparent;
+						font-weight: 700;
+						color: var(--gold);
+						border-bottom-color: var(--gold);
+					}
+				}
+			}
+		}
+		.vc_tta-panels{
+			.vc_tta-panel-body{
+				margin-top: 15px;
+				padding: 0;
+				border: 1px solid var(--gold)!important;
+				.vc_column-inner{
+					>.wpb_wrapper{						
+						>*:last-child{
+							margin-bottom: 0;
+						}
+					}
+				}
+				._image{
+					>.vc_column-inner{
+						>.wpb_wrapper{
+							padding: 35px;
+						}
+					}
+					.wpb_single_image {
+						
+					}
+				}
+				._slide {
+					border-left: 1px solid var(--gold);
+					>.vc_column-inner{
+						>.wpb_wrapper{
+							height: 100%;
+							margin-left: -15px;
+							padding:{
+								top: 35px;
+								left:80px;
+								right:50px;
+								bottom: 35px
+							}
+							background-color: var(--brown);
+							
+						}
+					}
+					
+				}
+			}
+		}
+	}
+}
