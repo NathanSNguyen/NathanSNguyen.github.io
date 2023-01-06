@@ -1,0 +1,43 @@
+.wb_crown_imgs {
+	width: 550px;
+	max-width: 100%;
+	margin: 30px auto;
+	
+	.item{
+		display: flex;
+		align-items: flex-end;
+		border-bottom: 1px solid var(--gold);
+		margin-top: 10px;
+		padding-bottom: 7px;
+		padding-left: 7px;
+		font-size: 12px;
+		margin-left: var(--mrl);
+		position: relative;
+		justify-content: space-between;
+		@include mobile{
+			
+		}
+		&::before{
+			content: '';
+			position: absolute;
+			height: 13px;
+			width: 1px;
+			bottom: 0;
+			left: 0;
+			background-color: var(--gold);
+		}
+	}
+	._info {
+		
+		text-align: right;
+		max-width: 160px;
+		@include mobile{
+			flex: 0 0 100%;
+		}
+	}
+	._img{
+		img{
+			vertical-align: top;
+		}
+	}
+}

@@ -1,0 +1,95 @@
+$xlarge: 1600px;
+$large: 1366px;
+$small: 1200px;
+$tablet_lg: 992px;
+$tablet: 767px;
+$mobile: 640px;
+$mobile_sm: 440px;
+@mixin xlarge {
+  @media (max-width: #{$xlarge}) {
+    @content;
+  }
+}
+@mixin large {
+  @media (max-width: #{$large}) {
+    @content;
+  }
+}
+@mixin small {
+  @media (max-width: #{$small}) {
+    @content;
+  }
+}
+@mixin tablet_lg {
+  @media (max-width: #{$tablet_lg}) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (max-width: #{$tablet}) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
+@mixin mobile_sm {
+  @media (max-width: #{$mobile_sm}) {
+    @content;
+  }
+}
+@mixin center{
+	top:50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+@mixin fieldsapperance{
+	font-family: inherit;
+	font-size: inherit;	
+	border: 1px solid transparent;
+	line-height: inherit;
+}
+@mixin buttonpadding($height,$lineheight,$size,$borderwidth){
+	padding: calc((#{calc($height / $size)}em - #{$lineheight}em)/2 - $borderwidth) 1.5em;
+}
+@mixin gradient_text{
+	background-image: linear-gradient(180deg, #A47430 0%, #BEAE8F 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+}
+@mixin list_dots{
+	margin-top: 1.5em;
+		li{
+			padding-left: 10px;
+			position: relative;
+			&::before{
+				content: '';
+				position: absolute;
+				width: 4px;
+				height: 4px;
+				border-radius: 4px;
+				background-color: var(--dot-color);
+				top: 12px;
+				left: 0;
+			}
+			&:first-child{
+				margin-top: 0;
+			}
+			strong{
+				font-weight: 700;
+				color: var(--gold);
+			}
+		}
+}
+@mixin dotbullets {
+	width: 12px;
+	height: 12px;
+	border-radius: 12px;
+	background-color: transparent;
+	position: relative;
+	border: 1px solid currentColor;
+	display: inline-block;
+}

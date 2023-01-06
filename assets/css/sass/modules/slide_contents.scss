@@ -1,0 +1,32 @@
+.wb_slide_contents {
+	margin-top: 30px;
+	._content_text {
+		width: 700px;
+		max-width: 100%;		
+		margin-top: -85px;
+		margin-left: auto;
+		margin-right: auto;
+		position: relative;
+		z-index: 3;
+		.swiper-pagination {
+			margin-top: 30px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-bottom: 30px;
+		}
+		.swiper-slide{
+			padding: 43px 65px 33px;
+			@include tablet{
+				padding: 30px 30px 25px;
+			}
+		}
+		.swiper{
+		}
+		@include tablet{
+			margin-top: 0;
+			width: 100%;
+			
+		}
+	}
+}
